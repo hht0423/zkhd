@@ -1,4 +1,4 @@
-活动表t_zk_act:
+﻿活动表t_zk_act:
     act_id:      主键
 	act_desc:    活动描述
 	user_name:   姓名
@@ -15,6 +15,6 @@
 	prd_name:    商品名称
 	prd_model：   商品型号
 	city:        活动所在市
-	undertaker:        多动承办商
+	undertaker:        活动承办商
 	book_time:   预订时间
     create_time: 创建时间
