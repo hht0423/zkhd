@@ -1,0 +1,20 @@
+活动表t_zk_act:
+    act_id:      主键
+	act_desc:    活动描述
+	user_name:   姓名
+	gender:      性别
+	tel_no:      手机号码
+	act_type:    活动类型，1-注册类型  
+	act_code:    活动代码，如AUDI_DRIVE（Audi试驾）
+	create_time: 创建时间
+	
+活动详情表t_zk_act_detail：
+    detail_id:   主键
+    act_id:      活动id
+	act_detail： 活动详情
+	prd_name:    商品名称
+	prd_model：   商品型号
+	city:        活动所在市
+	undertaker:        多动承办商
+	book_time:   预订时间
+    create_time: 创建时间

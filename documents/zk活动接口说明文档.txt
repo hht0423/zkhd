@@ -1,0 +1,21 @@
+zk活动接口文档说明
+（1）奥迪试驾预约接口
+     后台接口：/zkhd/act/audi/actRegister.action
+	 前台参数：
+	    活动基本信息：
+			actBean.activity.userName;//  姓名
+			
+			actBean.activity.gender;// 性别（男-m 女-f）
+			
+			actBean.activity.telNo;//    手机号码
+
+	    活动详情：
+			actBean.actDetail.prdName;//商品名称（如奥迪A3）
+			
+			actBean.actDetail.prdModel;//商品型号（如汽车型号）
+			
+			actBean.actDetail.city;//   活动所在市
+			
+			actBean.actDetail.undertaker;//      活动商（如经销商名称）
+			
+			actBean.actDetail.bookTime;//   预订时间（如计划购车时间）	   
