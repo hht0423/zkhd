@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- REPLACE STRUTS MODE ON PUBLISH BEGIN -->
+	<constant name="struts.devMode" value="false" />
+	<!-- REPLACE STRUTS MODE ON PUBLISH END -->
+	<constant name="struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources,errors" />
+	<constant name="struts.multipart.maxSize" value="204800000" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	
+	<package name="zk_global" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="streamx" class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX" />
+			<result-type name="json" class="org.apache.struts2.json.JSONResult"></result-type>
+		</result-types>
+		
+<!-- 		<global-results>
+			<result name="login">${vcMainUrl}</result>
+			<result name="error">${vc404ErrorUrl}</result>
+		</global-results> -->
+		 <interceptors>
+		     <interceptor name="validate" class="com.zk.common.interceptor.ValidateInterceptor"/>
+		
+		</interceptors>
+		<global-exception-mappings>
+			<exception-mapping result="normalException"  exception="com.zk.common.exception.BusinessException" />
+		</global-exception-mappings>
+		
+	</package>
+	
+    <include file="struts-zkhd.xml" />
+		
+</struts>
